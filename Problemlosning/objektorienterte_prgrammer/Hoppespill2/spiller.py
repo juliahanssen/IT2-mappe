@@ -6,14 +6,14 @@ class Spiller(Figur):
         super().__init__(x, y)
         self._fartY = fartY
 
-    def tegn(self, vindu):
+    def tegn_spiller(self, vindu):
         pg.draw.circle(vindu, (100,50,140), (self._x,self._y), 25)
     
-    def hopp():
-        pass
+    def hopp(self):
+        self._y -= 5
     
-    def fall():
-        pass
+    def fall(self):
+        self._y +=1
 
     def er_over_hinder():
         pass

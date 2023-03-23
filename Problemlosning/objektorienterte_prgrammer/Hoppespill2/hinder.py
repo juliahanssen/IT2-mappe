@@ -6,11 +6,12 @@ class Hinder(Figur):
     def __init__(self, x, y, fartX):
         super().__init__(x, y)
         self._fartX = fartX
-        self._hoyde = randint(20,100)
-        self._bredde = 10
+        self._hoyde = randint(20,600)
+        self._bredde = 90
+        self._y = 720 - self._hoyde
     
     def tegn_hinder(self, vindu):
         pg.draw.rect(vindu, (180,40,70),(self._x, self._y,self._bredde, self._hoyde))
 
-    def flytt_venstre():
-        pass
+    def flytt_venstre(self):
+        self._x -= 1
