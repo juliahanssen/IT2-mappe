@@ -19,11 +19,10 @@ class Spiller(Figur):
         if self._y < 720 - self._radius:
              self._y +=1
 
-    def poeng(self):
-        #if self._y > hinder._hoyde_topp and self._y < hinder._hoyde_bunn
-            # self._poeng +=1
-        pass
+    #def poeng(self):
+        #if self._y > hinder._hoyde_topp and self._y < hinder._hoyde_bunn:
+            #self._poeng +=1
 
-    def er_over_hinder(self):
-        if self._y < hinder._hoyde_topp or self._y > hinder._hoyde_bunn:
-            pass # stopp spill?
+    #def er_over_hinder(self):
+        #if self._y < hinder._hoyde_topp or self._y > hinder._hoyde_bunn:
+            #return True

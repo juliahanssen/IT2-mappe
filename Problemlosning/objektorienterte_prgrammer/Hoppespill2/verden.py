@@ -19,6 +19,8 @@ for i in range(3):
 
 frame = 0
 
+poeng = 0
+
 while running:
     # poll for events
     # pygame.QUIT event means the user clicked X to close your window
@@ -40,6 +42,9 @@ while running:
     for hinder in hindere:
         hinder.tegn_hinder(screen)
         hinder.flytt_venstre()
+        if spiller._x > hinder._x and spiller._x < hinder._x + 90:
+            if spiller._y > hinder._hoyde_topp and spiller._y < hinder._hoyde_bunn:
+                poeng += 0.01
     
 
     keys = pg.key.get_pressed()
@@ -47,6 +52,13 @@ while running:
         spiller.hopp()
 
     spiller.fall()
+
+    font = pg.font.Font(None, 36) 
+    poeng_text = font.render(f'Poeng: {poeng}', True, (255, 255, 255)) 
+    screen.blit(poeng_text, (10, 10))
+
+    if spiller._y < hinder._hoyde_topp or spiller._y > hinder._hoyde_bunn:
+        print("tapt")
     
 
     # flip() the display to put your work on screen
