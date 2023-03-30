@@ -1,4 +1,5 @@
 from figur import Figur
+from hinder import Hinder
 import pygame as pg
 
 class Spiller(Figur):
@@ -6,6 +7,7 @@ class Spiller(Figur):
         super().__init__(x, y)
         self._fartY = fartY
         self._radius = 25
+        self._poeng = 0
 
     def tegn_spiller(self, vindu):
         pg.draw.circle(vindu, (100,50,140), (self._x,self._y), self._radius)
@@ -16,6 +18,12 @@ class Spiller(Figur):
     def fall(self):
         if self._y < 720 - self._radius:
              self._y +=1
-    
-    def er_over_hinder():
+
+    def poeng(self):
+        #if self._y > hinder._hoyde_topp and self._y < hinder._hoyde_bunn
+            # self._poeng +=1
         pass
+
+    def er_over_hinder(self):
+        if self._y < hinder._hoyde_topp or self._y > hinder._hoyde_bunn:
+            pass # stopp spill?
