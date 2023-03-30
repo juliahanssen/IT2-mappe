@@ -44,7 +44,7 @@ while running:
         hinder.flytt_venstre()
         if spiller._x > hinder._x and spiller._x < hinder._x + 90:
             if spiller._y > hinder._hoyde_topp and spiller._y < hinder._hoyde_bunn:
-                poeng += 0.01
+                poeng += 1
     
 
     keys = pg.key.get_pressed()
